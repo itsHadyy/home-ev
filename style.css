@@ -89,7 +89,7 @@ header {
     transition: background-color 0.7s ease-in-out;
 }
 
-header:hover{
+header:hover {
     background-color: var(--green);
     backdrop-filter: blur(1);
     -webkit-backdrop-filter: blur(1);
@@ -313,6 +313,10 @@ span {
     gap: 80px;
 }
 
+.appFlow02 {
+    display: none;
+}
+
 .appFlow img {
     width: 100%;
 }
@@ -474,7 +478,7 @@ form .btn {
 }
 
 .home07 {
-     margin-top: 80px;
+    margin-top: 80px;
 }
 
 .home07 section {
@@ -484,7 +488,6 @@ form .btn {
     align-items: center;
     justify-content: center;
     text-align: center;
-    text-align: right !important;
 }
 
 .home07 .content {
@@ -507,7 +510,7 @@ form .btn {
     width: 200px;
 }
 
-.home08{
+.home08 {
     padding: 80px 120px;
     padding-top: 0;
     background: rgb(241, 243, 241);
@@ -564,4 +567,191 @@ footer li {
 
 footer p {
     margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 80%;
+        display: none;
+    }
+
+    .home01 {
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+    }
+
+    .home01 .hero {
+        order: -1;
+        padding: 0 20px;
+    }
+
+    .home01 .hero h1 {
+        font-size: 22px;
+    }
+
+    .home01 .btn {
+        margin: 10px;
+        width: 42%;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .screenshotContainer img {
+        width: 70%;
+    }
+
+    .landingLeft {
+        transform: rotate(30deg) translateX(-20px);
+        transition: transform 0.7s linear;
+    }
+
+    .landingRight {
+        transform: rotate(330deg) translateX(20px);
+        transition: transform 0.7s linear;
+    }
+
+    .originLeft {
+        transition: transform 1s linear;
+        transform: rotate(0deg) !important;
+    }
+
+    .originRight {
+        transition: transform 1s linear;
+        transform: rotate(360deg) !important;
+    }
+
+    .container {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .home02 {
+        padding: 20px;
+        grid-template-columns: repeat(1, minmax(80px, 1fr));
+    }
+
+    .artworkContainer {
+        height: auto;
+    }
+
+    .home03 .aboutContainer {
+        grid-template-columns: repeat(1, minmax(80px, 1fr));
+        gap: 40px;
+    }
+
+    .home03 img {
+        width: 60%;
+    }
+
+    .home03,
+    .home04 {
+        margin: 40px auto;
+    }
+
+    .appFlow {
+        display: none;
+    }
+
+    .appFlow02 {
+        display: block;
+    }
+
+    .appFlow02 img {
+        width: 70%;
+    }
+
+    .arrow-down {
+        width: 40% !important;
+        margin: 20px auto;
+    }
+
+    .testimonials {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .home07 section {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home07 img {
+        width: 80%;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .content .qr img {
+        display: none;
+    }
+
+    .home07 .btn {
+        width: 100%;
+    }
+
+    .content .qr {
+        gap: 20px;
+    }
+
+    .home06Main {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(80px, 1fr));
+        gap: 20px;
+    }
+
+    .home08 {
+        padding: 40px 20px;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .mapContainer{
+        max-width: 100%;
+        width: 100%;
+        margin: auto;
+    }
+
+    form .btn{
+        float: none;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto;
+        width: 40%;
+    }
+
+    footer{
+        padding: 20px;
+    }
+
+    .footerSection {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+        gap: 20px;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footerSection div:nth-child(1) {
+        grid-column: auto / span 1;
+    }
+
+    .footerSection div:nth-child(1) .btn {
+        width: 100%;
+        margin: 10px 0;
+        background-image: radial-gradient(100% 100% at 100% 0, #777 0, #000 100%) !important;
+    }
+
 }
